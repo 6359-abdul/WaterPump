@@ -1,6 +1,6 @@
 import React from 'react';
-import p1images from './images/P1.png'
-import p2images from './images/P2.png'
+import P1images from './images/P1.png'
+import P2images from './images/P2.png'
 import OWimages from './images/OW.png'
 
 const ProductList: React.FC = () => {
@@ -46,9 +46,9 @@ const ProductList: React.FC = () => {
              </div>
              
              <div className="grid grid-cols-2 gap-6">
-                <img src={p1images} alt="V-3 Pump" className="rounded-2xl shadow-xl w-full h-100 object-cover" />
+                <img src={P1images} alt="V-3 Pump" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
                 <div className="space-y-6">  
-                   <img src={p2images} alt="Pump Component 1" className="rounded-2xl shadow-lg w-full h-100 object-cover" />
+                   <img src={P2images} alt="Pump Component 1" className="rounded-2xl shadow-lg w-full h-[400px] object-cover" />
                 </div>
              </div>
           </div>
