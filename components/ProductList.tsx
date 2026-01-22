@@ -1,6 +1,6 @@
 import React from 'react';
-import p1images from './images/p1.png'
-import p2images from './images/p2.png'
+import p1images from './images/P1.png'
+import p2images from './images/P2.png'
 import OWimages from './images/OW.png'
 
 const ProductList: React.FC = () => {
