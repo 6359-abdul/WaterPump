@@ -1,0 +1,7 @@
+{
+  "name": "Pacific Pumps & Motors",
+  "description": "Professional corporate website for Pacific Pumps & Motors, featuring submersible pumps, motors, and industrial solutions.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
