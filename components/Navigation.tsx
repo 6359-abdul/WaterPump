@@ -3,6 +3,7 @@ import React from 'react';
 import logo from './images/logo.png'
 const Navigation: React.FC = () => {
   const navLinks = [
+    { name: 'PUMPS', href: '#pumps' },
     { name: 'ABOUT', href: '#about' },
     { name: 'PRODUCTS', href: '#products' },
     { name: 'QUALITY', href: '#quality' },

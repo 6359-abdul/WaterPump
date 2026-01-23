@@ -11,12 +11,14 @@ import ProductList from './components/ProductList.tsx';
 import Solutions from './components/Solutions.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
+import Pumps from './components/Pumps.tsx';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Navigation />
       <main>
+        <Pumps />
         <Hero />
         <About />
         <Stats />
