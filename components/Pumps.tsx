@@ -239,10 +239,22 @@ const Pumps = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <PumpCard title="Centrifugal Pumps" />
-            <PumpCard title="Monoblock Pumps" />
-            <PumpCard title="Submersible Pumps" />
-            <PumpCard title="Openwell Pumps" />
+            <PumpCard
+              title="Centrifugal Pumps"
+              imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsNonWgKxuo-75LSm1UOFsehs-8dSJUPzc9Q&s"
+            />
+            <PumpCard
+              title="Monoblock Pumps"
+              imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiG2ynma2O-qsNLEytAAgovIrIVQXBF8XdEw&s"
+            />
+            <PumpCard
+              title="Submersible Pumps"
+              imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPD3e3N9uB17vMbNx48CChVC5M8fD3VTh4Pg&s"
+            />
+            <PumpCard
+              title="Openwell Pumps"
+              imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGTU0-lkSoBQU7NRaUuTYDAcNJqBYLRJx4OQ&s"
+            />
           </div>
         </div>
 
@@ -251,10 +263,12 @@ const Pumps = () => {
   );
 };
 
-const PumpCard = ({ title }: { title: string }) => (
+const PumpCard = ({ title, imageUrl }: { title: string; imageUrl: string }) => (
   <div className="bg-white rounded-2xl shadow-sm border hover:shadow-md transition p-6 cursor-pointer">
     <div className="h-32 bg-gradient-to-br from-blue-50 to-blue-100 rounded mb-4 flex items-center justify-center">
-      <div className="text-4xl">💧</div>
+      <div className="text-4xl">
+        <img src={imageUrl} alt={title} className="w-full h-full object-contain" />
+      </div>
     </div>
     <h3 className="font-semibold text-slate-800 text-lg">{title}</h3>
     <p className="text-sm text-slate-500 mt-2">
