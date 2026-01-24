@@ -1,27 +1,30 @@
 import React from 'react';
-import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendWhatsApp = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'YOUR_SERVICE_ID',     // ← replace
-        'YOUR_TEMPLATE_ID',    // ← replace
-        e.currentTarget,
-        'YOUR_PUBLIC_KEY'      // ← replace
-      )
-      .then(
-        () => {
-          alert('Message sent successfully!');
-          e.currentTarget.reset();
-        },
-        () => {
-          alert('Failed to send message. Please try again.');
-        }
-      );
+    const form = e.currentTarget;
+
+    const name = (form.elements.namedItem("user_name") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("user_phone") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const whatsappMessage =
+      `Hello Pacific Pumps,%0A%0A` +
+      `Name: ${name}%0A` +
+      `Phone: ${phone}%0A%0A` +
+      `Message: ${message}`;
+
+    const whatsappNumber = "919849866206"; // 🔴 replace with your WhatsApp number
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`,
+      "_blank"
+    );
+
+    form.reset();
   };
 
   return (
@@ -82,7 +85,7 @@ const Contact: React.FC = () => {
               Request a Quote
             </h3>
 
-            <form className="space-y-6" onSubmit={sendEmail}>
+            <form className="space-y-6" onSubmit={sendWhatsApp}>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -99,11 +102,11 @@ const Contact: React.FC = () => {
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700">
-                    Email Address
+                    Phone Number
                   </label>
                   <input
-                    type="email"
-                    name="user_email"
+                    type="tel"
+                    name="user_phone"
                     required
                     className="w-full px-4 py-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-green-600"
                   />

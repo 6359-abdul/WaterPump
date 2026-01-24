@@ -11,14 +11,15 @@ const Pumps = () => {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 py-20">
-
+        
+       
         {/* Featured Pumps Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-slate-800 mb-10 text-center">
             Featured Pumps
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Powerful Pump */}
             <div className="bg-white rounded-2xl shadow-lg border p-6 hover:shadow-xl transition">
               <div className="h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg mb-6 flex items-center justify-center">
@@ -46,7 +47,32 @@ const Pumps = () => {
               </button>
             </div>
 
-            {/* Versatile Pump */}
+            {/* Residental Pump */}
+            <div className="bg-white rounded-2xl shadow-lg border p-6 hover:shadow-xl transition">
+              <div className="h-48 bg-gradient-to-br from-green-50 to-green-100 rounded-lg mb-6 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl text-green-600 mb-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTha1ZjY9PV6oImAIvHeper7gqqJ9Ug1gv5Eg&s" alt="" />
+                  </div>
+                </div>
+              </div>
+              <h4 className="font-bold text-slate-800 mb-4 text-lg">
+               5 Benefits of Using Residential Pumps in Your Home
+              </h4>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                  <span className="text-slate-600">Easy to use operation</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-green-500 mr-2 mt-0.5">✓</span>
+                  <span className="text-slate-600">User-friendly design</span>
+                </div>
+              </div>
+              <button className="mt-6 text-blue-600 font-semibold flex items-center hover:text-blue-800">
+                Know More <span className="ml-2">→</span>
+              </button>
+            </div>
             <div className="bg-white rounded-2xl shadow-lg border p-6 hover:shadow-xl transition">
               <div className="h-48 bg-gradient-to-br from-green-50 to-green-100 rounded-lg mb-6 flex items-center justify-center">
                 <div className="text-center">
@@ -72,6 +98,7 @@ const Pumps = () => {
                 Know More <span className="ml-2">→</span>
               </button>
             </div>
+
 
             {/* Agricultural Pump */}
             <div className="bg-white rounded-2xl shadow-lg border p-6 hover:shadow-xl transition">
