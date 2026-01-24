@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
           ))}
 
           <a
-            href="https://wa.me/919876543210?text=Hello%20Pacific%20Pumps"
+            href="https://wa.me/919849866206?text=Hello%20Pacific%20Pumps"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#25D366] text-lg"
